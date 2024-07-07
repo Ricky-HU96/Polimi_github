@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Val Belviso - Results</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top Button</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/bootstrap-5.0.2-dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/custom-styles.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body class="left-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="#">Val Belviso - Results</a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="current"><a href="../index.html">Home</a></li>
+            <li class="current"><a href="methodology.html">Methodology</a></li>
+            <li class="current"><a href="result.html">Results</a></li>
+            <li class="current"><a href="webgis.html">WebGIS</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <article id="main">
+        <header class="special container">
+          <span class="icon solid fa-trophy"></span>
+          <h2>Results</h2>
+          <p class="headbold">
+            This section will present the main outcomes and results of the
+            analysis, in particular regarding the Susceptibility Maps and the
+            Exposure Assessments.
+          </p>
+        </header>
+
+        <!-- Susceptibility maps results -->
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt1">1. Susceptibility maps results</h3>
+          </header>
+          <br />
+          <p class="justify">
+            The overall accuracy is <b>0.81</b>, a pretty low value that can be
+            increased. In order to do so, we can try to <b>increase</b> the
+            number of <b>training</b> points that are used to create the
+            susceptibility map, so that the level of detail of the information
+            will be higher.
+          </p>
+          <img
+            src="../images/QGIS/RESULT/TABLE.png"
+            alt="Points"
+            style="max-width: 90%"
+          />
+          <figcaption>
+            Validation of the 1,000 points version and accuracy measures
+          </figcaption>
+
+        </div>
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt2">2. Exposure assessment results</h3>
+          </header>
+          <p class="justify">
+            The last step is to <b>assess</b> how many elements of the territory
+            are <b>exposed</b> to the landslide susceptibility levels we just
+            obtained. The element to evaluate is how much of the
+            <b>population</b> is exposed.
+          </p>
+          <img
+            src="../images/QGIS/RESULT/PIE CHART.png"
+            alt="Points"
+            style="max-width: 100%"
+          />
+          <figcaption>Population exposure assessment</figcaption>
+          <br />
+          <div>
+            <br />
+          </div>
+          <p class="justify">
+            The 1,000 point layers results are presented.
+          </p>
+          <header class="major">
+        </div>
+
+
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt3">3. Final considerations</h3>
+          </header>
+          <p class="justify">
+            In this last section some <b>final considerations</b> will be
+            discussed, regardings the <b>limits</b> of the model, the
+            <b>errors</b> faced and the <b>approximations</b> applied.
+          </p>
+          <ul>
+            <li>
+              <p class="justify">
+                There are some limits and hard approximations that are
+                <b>always</b>
+                present in this analysis. Some of them were already stated, for
+                example the limit of considering only Hazard (1) and no
+                Hazard(0) area both in the <b>training and testing point</b>s
+                and so in the <b>creation and validation</b> of the
+                susceptibility maps.
+              </p>
+            </li>
+            <li>
+              <p class="justify">
+                Some problems were faced during the elaborations, in particular
+                all those issues related to
+                <b>layers projection, extention and resolution</b>. Since the
+                model requires that the three components must be the same for
+                each of the environmental factors, this led to some geometrical
+                approximations and light distorsion, expecially because the
+                layers had non homogeneous sources.
+              </p>
+            </li>
+            <li>
+          </ul>
+          <a
+            href="../pages/webgis.html"
+            class="button primary"
+            style="margin-top: 50px"
+            >Explore the WebGIS!
+          </a>
+        </div>
+      </article>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="copyright">
+          <li>&copy; Val Belviso</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <button id="scrollToTopBtn" class="scroll-to-top">Top</button>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollgress.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

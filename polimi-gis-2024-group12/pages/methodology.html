@@ -1,0 +1,578 @@
+
+<!DOCTYPE html>
+<!--
+	Twenty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Val Belviso - Methodology</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top Button</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/libraries/bootstrap-5.0.2-dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/custom-styles.css" />
+	<link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body class="left-sidebar is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo"><a href="#">Val Belviso - Methodology</a></h1>
+        <nav id="nav">
+          <ul>
+            <li class="current"><a href="../index.html">Home</a></li>
+            <li class="current"><a href="methodology.html">Methodology</a></li>
+            <li class="current"><a href="result.html">Results</a></li>
+            <li class="current"><a href="webgis.html">WebGIS</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main -->
+      <article id="main">
+        <header class="special container">
+          <span class="icon solid fa-wrench"></span>
+          <h2>Methodology</h2>
+          <p class="headbold">
+            This section will present the workflow and methodology applied to
+            obtain the Landslide Susceptibility Maps and the Exposure
+            Assessment.
+          </p>
+        </header>
+
+        <!-- General workflow -->
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3>General workflow</h3>
+          </header>
+
+          <div class="row">
+            <div class="col-6 col-12-narrower">
+              <div>
+                <a href="#chapt1">
+                  <img src="../images/step1.jpg" class="symb-method" />
+                </a>
+                <header>
+                  <h4>1.Data preprocessing for susceptibility mapping</h4>
+                </header>
+                <p>
+                  In this first phase, some preliminary operations were carried
+                  out. The main ones were downloading data, clipping with the
+                  study area, and obtaining information from the DTM data layer.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 col-12-narrower">
+              <div>
+                <a href="#chapt2">
+                  <img src="../images/step2.jpg" class="symb-method" />
+                </a>
+                <header>
+                  <h4>2.Susceptibility map generation</h4>
+                </header>
+                <p>
+                  In the second phase, the Susceptibility maps were computed
+                  through the "ModelMap" script in R environment, starting from
+                  the preprocessed layers obtained in Phase 1.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-12-narrower">
+              <div>
+                <a href="#chapt3">
+                  <img src="../images/step3.jpg" class="symb-method" />
+                </a>
+                <header>
+                  <h4>3.Data preprocessing for exposure assessment</h4>
+                </header>
+                <p>
+                  Another preprocessing set of operations regarded the data
+                  related to population exposure, through which evaluate the
+                  density of inhabitants in the Landslide Susceptibility areas.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 col-12-narrower">
+              <div>
+                <a href="#chapt4">
+                  <img src="../images/step4.jpg" class="symb-method" />
+                </a>
+                <header>
+                  <h4>4.Exposure assessment</h4>
+                </header>
+                <p>
+                  The final step consisted in estimating the number of people
+                  that live in different areas according to their Landslide
+                  Susceptibility level.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data preprocessing for susceptibility mapping -->
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt1">
+              1. Data preprocessing for susceptibility mapping
+            </h3>
+          </header>
+          <header>
+            <h4>Basic data</h4>
+          </header>
+          <p>
+            All this data was directly obtained and only clipped to the area of
+            analysis.
+          </p>
+          <!-- Row of grid 1-->
+          <div class="basic-data-grid">
+            <!-- DTM -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <div>
+                  <b>DTM</b>
+                </div>
+                <div>
+                  The DTM represents the elevation data of the terrain in a xyz
+                  format. It's derived from <i>Geoportale Lombardia</i> and it's
+                  helpful to process other information.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/DTM.png" width="500" height="500"
+                  alt="DTM"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+            <!-- NDVI -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <div>
+                  <br>
+                  <br>
+                  <br>
+                  <b>NDVI</b>
+                </div>
+                <div>
+                  The <i>Normalized Difference Vegetation Index</i> is a raster
+                  dataset that quantifies the health and density of vegetation
+                  through color bands. Data is derived from ESA Copernicus
+                  Sentinel-2 missions of 2020.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/NDVI.png" width="500" height="500"
+                  alt="NDVI"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Row of grid 2-->
+          <div class="basic-data-grid">
+            <!-- DUSAF -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>DUSAF</b>
+                <div>
+                  DUSAF stands for
+                  <i>Destinazione d'Uso del Suolo Agricolo e Forestale</i> and
+                  it's the regional database of Lombardy about the use of soil.
+                  The categories are collected in a tree scheme till 5 digits
+                  codes.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/DUSAF.png" width="500" height="500"
+                  alt="DUSAF"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+            <!-- ROADS -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>Roads</b>
+                <div>
+                  The data represents the buffers of distance from the main
+                  roads in the area.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/ROAD.png" width="500" height="500"
+                  alt="Roads"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Row of grid 3-->
+          <div class="basic-data-grid">
+            <!-- RIVERS -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>Rivers</b>
+                <div>
+                  The data represents the buffers of distance from the main
+                  water courses in the area.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/RIVER.png" width="500" height="500"
+                  alt="DUSAF"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+            <!-- FAULTS -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>Faults</b>
+                <div>
+                  The data represents the buffers of distance from the main
+                  geological faults in the area.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/FAULT.png" width="500" height="500"
+                  alt="Faults"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+          </div>
+          <br />
+          <header>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>Computed data</h4>
+          </header>
+          <p>
+            All this data was processed from the DTM layer through GRASS and
+            QGIS.
+          </p>
+          <!-- Row of grid 1-->
+          <div class="basic-data-grid">
+            <!-- SLOPE -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <b>Slope</b>
+                <div>
+                  The slope represents the inclination angle of the terrain and
+                  it's directly related to landslide occurrence.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/SLOPE.png" width="500" height="500"
+                  alt="Slope"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+            <!-- ASPECT -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>Aspect</b>
+                <div>
+                  The aspect represents the orientation of the slope of the
+                  terrain. It is strictly linked to sun exposure intensity and
+                  also to vegetation presence and strength.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/ASPECT.png" width="500" height="500"
+                  alt="Aspect"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Row of grid 2-->
+          <div class="basic-data-grid">
+            <!-- PLAN -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>Plan curvature</b>
+                <div>
+                  The plan curvature represents the slope curvature on the plan
+                  side. Concave and convex terrain can affect landslide
+                  creation.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/PLAN.png" width="500" height="500"
+                  alt="Plan curvature"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+            <!-- PROFILE -->
+            <div class="basic-data-element">
+              <div class="basic-data-text">
+                <br>
+                <br>
+                <br>
+                <b>Profile curvature</b>
+                <div>
+                  The profile curvature represents the slope curvature on the
+                  profile side. Concave and convex terrain can affect landslide
+                  creation.
+                </div>
+              </div>
+              <div>
+                <img
+                  src="../images/QGIS/METHODOLOGY/PROFILE.png" width="500" height="500"
+                  alt="Profile curvature"
+                  class="basic-data-img"
+                />
+              </div>
+            </div>
+          </div>
+          <p class="justify">
+            The final step to carry out for all the layers is to be sure that
+            the <b>CRS, Extent, and Resolution</b> of each of them is the same,
+            because it is one of the necessary conditions for the algorithm to
+            work.
+          </p>
+          <br />
+          <header>
+            <h4>Setting the training and testing points</h4>
+          </header>
+          <p class="justify">
+            To make the algorithm run properly, the data already presented is
+            not enough. We need to create a layer of <b>points</b> through which
+            the algorithm will be <b>trained</b>. Each of these points will host
+            a defined level of hazard, displayed with a precise value. To do so,
+            two new datasets are needed.
+          </p>
+          <ul>
+            <li>
+              <p class="justify">
+                The first one is directly downloaded from ISPRA: it is the "IFFI
+                landslide inventory" and represents the landslides already
+                occured in the past, between rapid flowing and
+                rotational/translational sliding.
+              </p>
+            </li>
+            <li>
+              <p class="justify">
+                The second one is derived from the <i>slope</i> layer already
+                processed. We will assume that all the terrain under 20° and
+                over 70° of slope is very unlikely to generate landslides. The
+                assumption is that in the first case it's not enough inclined,
+                while in the latter it usually hosts compositions of too hard
+                rocks.
+              </p>
+            </li>
+          </ul>
+          <img
+            src="../images/QGIS/METHODOLOGY/LZ_NLZ.png"
+            alt="Hazard"
+            style="max-width: 90%"
+          />
+          <figcaption>
+            Lanslide inventory dataset and the "No Landslide
+            zones"
+          </figcaption>
+          <br />
+          <p class="justify">
+            At this point, we define by convention the "no landslide zones" as
+            areas without hazard (value=0) and the areas previously affected by
+            landslides with the maximum hazard (value=1).
+          </p>
+          <p class="justify">
+            Thanks to this assumption we are able to create the points layers.
+            In particular there is the need to create two sets of points, one to
+            <b>train</b> the model and the other one to <b>test</b> its result.
+          </p>
+          <p class="justify">
+            In order to obtain the layer from which the points will be created,
+            we must delete the intersecting polygons between the NLZ layer and
+            the landslide inventory one. Although these intersections are not
+            possible in principle, they are present because we assumed an
+            arbitrary and quite simple method to evaluate the hazard level of 0
+            and 1.
+          </p>
+          <p class="justify">
+            Once the united layer is ready, the points layer can be created. A
+            random selection can be operated to mark the areas through a 30/70
+            ratio. In this way, 30% will be devoted to create testing points and
+            70% to create training points. A random point creator is used to
+            generate the points layer, in which we will maintain a 1:1 ratio
+            between 0 Hazard and 1 Hazard points. Since the generated points are
+            <b>1,000</b>, we will have <b>300 testing points</b> and
+            <b>700 training points</b>.
+          </p>
+          <img
+            src="../images/QGIS/METHODOLOGY/Geometry and points layers.png"
+            alt="Points"
+            style="max-width: 90%"
+          />
+          <figcaption>
+            Geometry from which points are created (on the left) and the points
+            layers
+          </figcaption>
+          <br />
+          <p class="justify">
+            The final operation is to join the information of the Basic and
+            Computed Data rasters to the points layers. A
+            <i>sampling</i> operation is carried out, so that each point gets
+            the information of every layer on which it spatially falls. The
+            following screen of the layer attribute table shows the final
+            result.
+          </p>
+          <img src="../images/QGIS/METHODOLOGY/ATTRIBUTE TABLE.png" alt="Table" style="max-width: 90%" />
+        </div>
+
+        <!-- Susceptibility mapping -->
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt2">2. Susceptibility map generation</h3>
+          </header>
+          <p class="justify">
+            The second step is to create the Susceptibility map through the
+            <b>Model Map script</b> in QGIS environment. In order to perform the
+            computation, the algorithm needs all the raster layers that were
+            preprocessed in Step 1 and the layer of training points sampled with
+            the raster information, basically, everything that was shown in the
+            previous section.
+          </p>
+          <img src="../images/QGIS/METHODOLOGY/MODEL.png" alt="Table" style="max-width: 90%" />
+          <figcaption>Model workflow scheme</figcaption>
+          <br />
+          <p class="justify">
+            The first outcome of the algorithm is a raster layer with
+            <b>continue values between 1 and 2</b>, representing respectively
+            the lowest and highest level of Susceptibility. In order to present
+            it in a more consistent form, the layer is reclassified to a
+            <b>0 to 4 discrete classification</b>.
+          </p>
+          <img
+            src="../images/QGIS/METHODOLOGY/SUSPECTIBILITY.png"
+            alt="Susceptibility maps"
+            style="max-width: 90%"
+          />
+          <figcaption>Susceptibility Maps</figcaption>
+          <br />
+        </div>
+
+        <!-- Data preprocessing for exposure assessment -->
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt3">3. Data preprocessing for exposure assessment</h3>
+          </header>
+          <p class="justify">
+            In this phase, the goal is to <b>assess the exposure</b> of the
+            real-world elements to the landslide susceptibility just calculated.
+            In particular, this assessment is carried out with the
+            <b>population</b> data. The goal is to understand how many people
+            live in areas with high or low levels of landslide susceptibility.
+            In this way, it's possible to aggregate the population raster
+            data in relation to the susceptibility map raster and get the
+            <b>overall statistics</b> for the four classes.
+          </p>
+          <p class="justify">
+            Before doing so, we need to manipulate the population layer in order
+            to prepare it for the calculation. In particular, we need to clip it
+            to the area of analysis and then resample it, that is, make sure
+            that its resolution is equal to that of the Susceptibility Map.
+          </p>
+          <img
+            src="../images/QGIS/METHODOLOGY/AGGREGATED_POPULATION.png"
+            alt="Population preprocessing"
+            style="max-width: 90%"
+          />
+          <figcaption>Preprocessed layers for exposure assessment</figcaption>
+          <br />
+        </div>
+
+        <!-- Exposure assessment -->
+        <div class="wrapper style3 container special">
+          <header class="major">
+            <h3 id="chapt4">4. Exposure assessment</h3>
+          </header>
+          <p class="justify">
+            The last step is to process the two layers with a zonal statistic
+            plugin in order to obtain the statistics of the population raster as
+            a sum, in relation to the landslide susceptibility raster. The
+            outcome will be a table in which for each of the 4 classes of
+            susceptibility we will have the total of people living in that
+            particular class of territory. 
+          </p>
+          <br />
+          <a
+            href="../pages/result.html"
+            class="button primary"
+            style="margin-top: 50px"
+            >Explore the results!
+          </a>
+        </div>
+      </article>
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="copyright">
+          <li>&copy; Val Belviso</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </div>
+
+  <!--back to the top-->
+	<button id="scrollToTopBtn" class="scroll-to-top">Top</button>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.dropotron.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollgress.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/browser.min.js"></script>
+    <script src="../assets/js/breakpoints.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
+
